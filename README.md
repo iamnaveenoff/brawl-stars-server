@@ -4,3 +4,5 @@ This repository contains the Development build of PaulModz Brawl Stars, In Java 
 Second you will need to decrypt libg.so to replace the hostname by getting getaddrinfo!
 
 Use this tool : https://github.com/iGio90/Poseidon this will help decompile and getaddrinfo!
+
+![](https://media.discordapp.net/attachments/548833147866054657/550343381692448769/ss.png?width=400&height=235)
