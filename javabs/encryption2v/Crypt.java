@@ -1,6 +1,6 @@
-package daniillnull.javacr.encryption2v;
+package paulmodz.javabs.encryption2v;
 
-import daniillnull.Sodium;
+import paulmodz.javabs.Sodium;
 
 public class Crypt
 {
@@ -22,7 +22,7 @@ public class Crypt
     if (id == 10101) {
       clientKey = java.util.Arrays.copyOf(packet, 32);
       sharedKey = java.util.Arrays.copyOf(packet, 32);
-      byte[] nonce = Sodium.sodium.genericHash(daniillnull.util.Helpers.concat(clientKey, pk));
+      byte[] nonce = Sodium.sodium.genericHash(paulmodz.javabs.util.Helpers.concat(clientKey, pk));
       
       byte[] chipherText = java.util.Arrays.copyOfRange(packet, clientKey.length, packet.length);
       byte[] message = Sodium.sodium.openPublicBox(chipherText, nonce, clientKey, sk);
@@ -41,7 +41,7 @@ public class Crypt
       return packet;
     }
     if ((id == 20103) || (id == 20104)) {
-      byte[] nonce = Sodium.sodium.genericHash(daniillnull.util.Helpers.concat(decryptNonce, clientKey, pk));
+      byte[] nonce = Sodium.sodium.genericHash(paulmodz.javabs.util.Helpers.concat(decryptNonce, clientKey, pk));
       byte[] message = daniillnull.util.Helpers.concat(encryptNonce, sharedKey, packet);
       byte[] chipherText = Sodium.sodium.createPublicBox(message, nonce, clientKey, sk);
       return chipherText;
