@@ -1,0 +1,2 @@
+# brawl-stars-server
+This repository contains the Development build of PaulModz Brawl Stars, In Java server emulator for the game Brawl Stars. Keep in mind that this is the version written by the official Developer Team containing. Paul Cornel PBS is NOT affiliated with Supercell, or any other company. Help and Support: http://bit.ly/UltraPowa Libsodium requires the Visual C++ Redistributable for Visual Studio 2015.. If its not installed Sodium.SodiumCore will throw a DllNotFoundException.
