@@ -1,4 +1,4 @@
-package daniillnull.javacr.game;
+package paulmodz.javabs.game;
 
 import java.io.DataOutput;
 
@@ -27,26 +27,6 @@ public class AllianceChatMessage { public byte[] message;
     type = type;
     return m;
   }
-  
-  public void encode(DataOutput d) throws java.io.IOException {
-    d.write(type == 0 ? 2 : 4);
-    d.write(0);
-    d.write(daniillnull.javacr.messages.Packet.encodeVInt(hashCode() & 0xFFFFF));
-    d.write(0);
-    d.write(daniillnull.javacr.messages.Packet.encodeVInt(pid));
-    d.write(0);
-    d.write(daniillnull.javacr.messages.Packet.encodeVInt(pid));
-    d.writeInt(pname.length);
-    d.write(pname);
-    d.write(new byte[] { 10, (byte)prole });
-    d.write(daniillnull.javacr.messages.Packet.encodeVInt((int)(System.currentTimeMillis() / 1000L - time / 1000L)));
-    d.write(0);
-    
-    if (type == 0) {
-      d.writeInt(message.length);
-      d.write(message);
-    } else {
-      d.write(type);
       d.write(0);
       d.write(0);
       d.writeInt(mname.length);
