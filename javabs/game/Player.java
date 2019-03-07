@@ -1,8 +1,8 @@
-package daniillnull.javacr.game;
+package paulmodz.javabs.game;
 
-import daniillnull.javacr.messages.Packet;
-import daniillnull.javacr.server.Session;
-import daniillnull.util.Helpers;
+import paulmodz.javabs.messages.Packet;
+import paulmodz.javabs.server.Session;
+import paulmodz.util.Helpers;
 import java.io.DataInputStream;
 import java.io.DataOutput;
 import java.io.DataOutputStream;
